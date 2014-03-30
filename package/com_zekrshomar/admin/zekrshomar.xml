@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.1" method="upgrade">
+	<name>com_zekrshomar</name>
+	<author>Mohammad Hasani Eghtedar</author>
+	<creationDate>September 2013</creationDate>
+	<copyright>(C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>m.h.eghtedar@behineweb.com</authorEmail>
+	<authorUrl>www.behineweb.com</authorUrl>
+	<version>1.0.0</version>
+	<description>COM_ZEKRSHOMAR_XML_DESCRIPTION</description>
+	<install><!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall><!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>zekrshomar.php</filename>
+		<filename>controller.php</filename>
+		<filename>router.php</filename>
+		<filename>metadata.xml</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+	</files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB.com_zekrshomar.ini</language>
+		<language tag="fa-IR">language/fa-IR.com_zekrshomar.ini</language>
+	</languages>
+	<administration>
+		<menu img="class:zekrshomar">com_zekrshomar</menu>
+		<submenu>
+			<!--
+				Note that all & must be escaped to &amp; for the file to be valid
+				XML and be parsed by the installer
+			-->
+			<menu link="option=com_zekrshomar" view="zekrs" img="class:zekrshomar" alt="Zekrshomar/Zekrs">COM_ZEKRSHOMAR_ZEKRS</menu>
+			<menu link="option=com_categories&amp;extension=com_zekrshomar" view="categories" img="class:zekrshomar-cat" alt="Zekrshomar/Categories">COM_ZEKRSHOMAR_CATEGORIES</menu>
+			<menu link="option=com_zekrshomar&amp;view=stats" view="stats" img="class:zekrshomar-stats" alt="Zekrshomar/Stats">COM_ZEKRSHOMAR_STATS</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>zekrshomar.php</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB.com_zekrshomar.ini</language>
+			<language tag="en-GB">language/en-GB.com_zekrshomar.sys.ini</language>
+			<language tag="fa-IR">language/fa-IR.com_zekrshomar.ini</language>
+			<language tag="fa-IR">language/fa-IR.com_zekrshomar.sys.ini</language>
+		</languages>
+	</administration>
+</extension>

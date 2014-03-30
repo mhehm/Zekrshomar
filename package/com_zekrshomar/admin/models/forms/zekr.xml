@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset
+		addfieldpath="/administrator/components/com_categories/models/fields">
+		<field
+			name="id"
+			type="text"
+			default="0"
+			label="JGLOBAL_FIELD_ID_LABEL"
+			readonly="true"
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"/>
+		<field
+			name="title"
+			type="text"
+			label="JGLOBAL_TITLE"
+			description="COM_ZEKRSHOMAR_FIELD_TITLE_DESC"
+			required="true" />
+		<field
+			name="alias"
+			type="text"
+			label="JFIELD_ALIAS_LABEL"
+			description="COM_ZEKRSHOMAR_FIELD_ALIAS_DESC" />
+		<field
+			name="catid"
+			type="categoryedit"
+			extension="com_zekrshomar"
+			label="JCATEGORY"
+			description="COM_ZEKRSHOMAR_FIELD_CATEGORY_DESC">
+		</field>
+		<field
+			name="mention"
+			type="textarea"
+			class="span6"
+			label="COM_ZEKRSHOMAR_FIELD_MENTION_LABEL"
+			description="COM_ZEKRSHOMAR_FIELD_MENTION_DESC"
+			required="true" />
+		<field
+			name="image"
+			type="media"
+			label="COM_ZEKRSHOMAR_FIELD_IMAGE_LABEL"
+			description="COM_ZEKRSHOMAR_FIELD_IMAGE_DESC" />
+		<field
+			name="state"
+			type="list"
+			label="JSTATUS"
+			description="COM_ZEKRSHOMAR_FIELD_STATE_DESC"
+			class="span12 small"
+			default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+		<field
+			name="ordering"
+			type="Ordering"
+			label="JFIELD_ORDERING_LABEL"
+			description="JFIELD_ORDERING_DESC" />
+		<field
+			name="created"
+			type="calendar"
+			label="JGLOBAL_FIELD_CREATED_LABEL"
+			description="JGLOBAL_FIELD_CREATED_DESC"
+			size="22"
+			format="%Y-%m-%d %H:%M:%S"
+			filter="user_utc" />
+		<field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+	</fieldset>
+</form>

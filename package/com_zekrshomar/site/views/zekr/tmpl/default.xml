@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout
+		title="COM_ZEKRSHOMAR_ZEKR_VIEW_DEFAULT_TITLE"
+		option="COM_ZEKRSHOMAR_ZEKR_VIEW_DEFAULT_OPTION">
+		<message>
+			<![CDATA[COM_ZEKRSHOMAR_ZEKR_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+	
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset
+			name="request"
+			addfieldpath="/administrator/components/com_zekrshomar/models/fields">
+			<field
+				name="id"
+				type="modal_zekr"
+				description="COM_ZEKRSHOMAR_SELECT_ZEKR_DESC"
+				label="COM_ZEKRSHOMAR_SELECT_ZEKR_LABEL"
+				required="true"
+				edit="true"
+				clear="false" />
+		</fieldset>
+	</fields>
+	
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+		<!-- Basic options. -->
+		<fieldset
+			name="params"
+			label="COM_ZEKRSHOMAR_BASIC_OPTIONS_FIELDSET_LABEL">
+			<field
+				name="zekr_category"
+				type="list"
+				default=""
+				label="COM_ZEKRSHOMAR_FIELD_ZEKR_SHOW_CATEGORY_LABEL"
+				description="COM_ZEKRSHOMAR_FIELD_ZEKR_SHOW_CATEGORY_DESC">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="hide">JHIDE</option>
+				<option value="show_no_link">COM_ZEKRSHOMAR_FIELD_VALUE_NO_LINK</option>
+				<option value="show_with_link">COM_ZEKRSHOMAR_FIELD_VALUE_WITH_LINK</option>
+			</field>
+			<field
+				name="zekr_list"
+				type="radio"
+				class="btn-group"
+				default=""
+				description="COM_ZEKRSHOMAR_FIELD_ZEKR_SHOW_LIST_DESC"
+				label="COM_ZEKRSHOMAR_FIELD_ZEKR_SHOW_LIST_LABEL">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			<field
+				name="user_id"
+				type="user"
+				label="COM_ZEKRSHOMAR_FIELD_DEFAULT_USER_LABEL"
+				description="COM_ZEKRSHOMAR_FIELD_DEFAULT_USER_DESC" />
+			<field
+				name="mention_style"
+				type="radio"
+				default=""
+				class="btn-group"
+				description="COM_ZEKRSHOMAR_FIELD_MENTION_STYLE_DESC"
+				label="COM_ZEKRSHOMAR_FIELD_MENTION_STYLE_LABEL">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="text">COM_ZEKRSHOMAR_FIELD_VALUE_TEXT</option>
+				<option value="image">COM_ZEKRSHOMAR_FIELD_VALUE_IMAGE</option>
+			</field>
+			<field
+				name="number_style"
+				type="list"
+				multiple="true"
+				default=""
+				description="COM_ZEKRSHOMAR_FIELD_NUMBER_STYLE_DESC"
+				label="COM_ZEKRSHOMAR_FIELD_NUMBER_STYLE_LABEL">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="single">COM_ZEKRSHOMAR_FIELD_VALUE_SINGLE</option>
+				<option value="options">COM_ZEKRSHOMAR_FIELD_VALUE_OPTIONS</option>
+				<option value="custom">COM_ZEKRSHOMAR_FIELD_VALUE_CUSTOM</option>
+			</field>
+			<field
+				name="options_style"
+				type="radio"
+				class="btn-group"
+				default=""
+				description="COM_ZEKRSHOMAR_FIELD_OPTIONS_STYLE_DESC"
+				label="COM_ZEKRSHOMAR_FIELD_OPTIONS_STYLE_LABEL">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="button">COM_ZEKRSHOMAR_FIELD_VALUE_BUTTON</option>
+				<option value="radio">COM_ZEKRSHOMAR_FIELD_VALUE_RADIO</option>
+				<option value="list">COM_ZEKRSHOMAR_FIELD_VALUE_LIST</option>
+			</field>
+			<field
+				name="options_values"
+				type="text"
+				description="COM_ZEKRSHOMAR_FIELD_OPTIONS_VALUES_DESC"
+				label="COM_ZEKRSHOMAR_FIELD_OPTIONS_VALUES_LABEL" />
+			<field
+				name="bg_color"
+				type="color"
+				description="COM_ZEKRSHOMAR_FIELD_BG_COLOR_DESC"
+				label="COM_ZEKRSHOMAR_FIELD_BG_COLOR_LABEL" />
+			<field
+				name="font_color"
+				type="color"
+				description="COM_ZEKRSHOMAR_FIELD_FONT_COLOR_DESC"
+				label="COM_ZEKRSHOMAR_FIELD_FONT_COLOR_LABEL" />
+			<field
+				name="receive_code"
+				type="radio"
+				class="btn-group"
+				default=""
+				label="COM_ZEKRSHOMAR_FIELD_RECEIVE_CODE_LABEL"
+				description="COM_ZEKRSHOMAR_FIELD_RECEIVE_CODE_DESC">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

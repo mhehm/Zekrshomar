@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="receivecode">
+		<field
+			name="id"
+			type="zekrs"
+			label="COM_ZEKRSHOMAR_FIELD_MENTION_LABEL"
+			description="COM_ZEKRSHOMAR_FIELD_MENTION_DESC" />
+		<field
+			name="mention_style"
+			type="radio"
+			description="COM_ZEKRSHOMAR_FIELD_MENTION_STYLE_DESC"
+			label="COM_ZEKRSHOMAR_FIELD_MENTION_STYLE_LABEL">
+			<option labelclass="inline" value="text">COM_ZEKRSHOMAR_FIELD_VALUE_TEXT</option>
+			<option labelclass="inline" value="image">COM_ZEKRSHOMAR_FIELD_VALUE_IMAGE</option>
+		</field>
+		<field
+			name="number_style"
+			type="checkboxes"
+			multiple="true"
+			description="COM_ZEKRSHOMAR_FIELD_NUMBER_STYLE_DESC"
+			label="COM_ZEKRSHOMAR_FIELD_NUMBER_STYLE_LABEL">
+			<option labelclass="inline" value="single">COM_ZEKRSHOMAR_FIELD_VALUE_SINGLE</option>
+			<option labelclass="inline" value="options">COM_ZEKRSHOMAR_FIELD_VALUE_OPTIONS</option>
+			<option labelclass="inline" value="custom">COM_ZEKRSHOMAR_FIELD_VALUE_CUSTOM</option>
+		</field>
+		<field
+			name="options_style"
+			type="radio"
+			description="COM_ZEKRSHOMAR_FIELD_OPTIONS_STYLE_DESC"
+			label="COM_ZEKRSHOMAR_FIELD_OPTIONS_STYLE_LABEL">
+			<option labelclass="inline" value="button">COM_ZEKRSHOMAR_FIELD_VALUE_BUTTON</option>
+			<option labelclass="inline" value="radio">COM_ZEKRSHOMAR_FIELD_VALUE_RADIO</option>
+			<option labelclass="inline" value="list">COM_ZEKRSHOMAR_FIELD_VALUE_LIST</option>
+		</field>
+		<field
+			name="options_values"
+			type="text"
+			class="ltr"
+			default="5-10-15-20-50-100"
+			description="COM_ZEKRSHOMAR_FIELD_OPTIONS_VALUES_DESC"
+			label="COM_ZEKRSHOMAR_FIELD_OPTIONS_VALUES_LABEL" />
+		<field
+			name="bg_color"
+			type="color"
+			class="ltr"
+			description="COM_ZEKRSHOMAR_FIELD_BG_COLOR_DESC"
+			label="COM_ZEKRSHOMAR_FIELD_BG_COLOR_LABEL" />
+		<field
+			name="font_color"
+			type="color"
+			class="ltr"
+			description="COM_ZEKRSHOMAR_FIELD_FONT_COLOR_DESC"
+			label="COM_ZEKRSHOMAR_FIELD_FONT_COLOR_LABEL" />
+		<field
+			name="iframe_width"
+			type="text"
+			class="ltr input-mini"
+			description="COM_ZEKRSHOMAR_FIELD_IFRAME_WIDTH_DESC"
+			label="COM_ZEKRSHOMAR_FIELD_IFRAME_WIDTH_LABEL" />
+		<field
+			name="iframe_height"
+			type="text"
+			class="ltr input-mini"
+			description="COM_ZEKRSHOMAR_FIELD_IFRAME_HEIGHT_DESC"
+			label="COM_ZEKRSHOMAR_FIELD_IFRAME_HEIGHT_LABEL" />
+		<field
+			name="email"
+			type="email"
+			class="ltr validate-email required"
+			required="true"
+			description="COM_ZEKRSHOMAR_FIELD_EMAIL_DESC"
+			label="COM_ZEKRSHOMAR_FIELD_EMAIL_LABEL" />
+	</fieldset>
+</form>

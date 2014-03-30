@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset
+		name="zekr"
+		label="COM_ZEKRSHOMAR_FIELD_CONFIG_INDIVIDUAL_ZEKR_DISPLAY"
+		description="COM_ZEKRSHOMAR_FIELD_CONFIG_INDIVIDUAL_ZEKR_DESC"
+		addfieldpath="/administrator/components/com_zekrshomar/models/fields">
+		<field
+			name="zekr_category"
+			type="list"
+			default="hide"
+			label="COM_ZEKRSHOMAR_FIELD_ZEKR_SHOW_CATEGORY_LABEL"
+			description="COM_ZEKRSHOMAR_FIELD_ZEKR_SHOW_CATEGORY_DESC">
+			<option value="hide">JHIDE</option>
+			<option value="show_no_link">COM_ZEKRSHOMAR_FIELD_VALUE_NO_LINK</option>
+			<option value="show_with_link">COM_ZEKRSHOMAR_FIELD_VALUE_WITH_LINK</option>
+		</field>
+		<field
+			name="zekr_list"
+			type="radio"
+			class="btn-group"
+			default="0"
+			description="COM_ZEKRSHOMAR_FIELD_ZEKR_SHOW_LIST_DESC"
+			label="COM_ZEKRSHOMAR_FIELD_ZEKR_SHOW_LIST_LABEL">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		<field
+			name="zekr_id"
+			type="modal_zekr"
+			label="COM_ZEKRSHOMAR_FIELD_DEFAULT_MENTION_LABEL"
+			description="COM_ZEKRSHOMAR_FIELD_DEFAULT_MENTION_DESC" />
+		<field
+			name="user_id"
+			type="user"
+			label="COM_ZEKRSHOMAR_FIELD_DEFAULT_USER_LABEL"
+			description="COM_ZEKRSHOMAR_FIELD_DEFAULT_USER_DESC" />
+		<field
+			name="mention_style"
+			type="radio"
+			default="text"
+			class="btn-group"
+			description="COM_ZEKRSHOMAR_FIELD_MENTION_STYLE_DESC"
+			label="COM_ZEKRSHOMAR_FIELD_MENTION_STYLE_LABEL">
+			<option value="text">COM_ZEKRSHOMAR_FIELD_VALUE_TEXT</option>
+			<option value="image">COM_ZEKRSHOMAR_FIELD_VALUE_IMAGE</option>
+		</field>
+		<field
+			name="number_style"
+			type="list"
+			multiple="true"
+			default="options"
+			description="COM_ZEKRSHOMAR_FIELD_NUMBER_STYLE_DESC"
+			label="COM_ZEKRSHOMAR_FIELD_NUMBER_STYLE_LABEL">
+			<option value="single">COM_ZEKRSHOMAR_FIELD_VALUE_SINGLE</option>
+			<option value="options">COM_ZEKRSHOMAR_FIELD_VALUE_OPTIONS</option>
+			<option value="custom">COM_ZEKRSHOMAR_FIELD_VALUE_CUSTOM</option>
+		</field>
+		<field
+			name="options_style"
+			type="radio"
+			class="btn-group"
+			default="button"
+			description="COM_ZEKRSHOMAR_FIELD_OPTIONS_STYLE_DESC"
+			label="COM_ZEKRSHOMAR_FIELD_OPTIONS_STYLE_LABEL">
+			<option value="button">COM_ZEKRSHOMAR_FIELD_VALUE_BUTTON</option>
+			<option value="radio">COM_ZEKRSHOMAR_FIELD_VALUE_RADIO</option>
+			<option value="list">COM_ZEKRSHOMAR_FIELD_VALUE_LIST</option>
+		</field>
+		<field
+			name="options_values"
+			type="text"
+			default="5-10-15-20-50-100"
+			description="COM_ZEKRSHOMAR_FIELD_OPTIONS_VALUES_DESC"
+			label="COM_ZEKRSHOMAR_FIELD_OPTIONS_VALUES_LABEL" />
+		<field
+			name="bg_color"
+			type="color"
+			description="COM_ZEKRSHOMAR_FIELD_BG_COLOR_DESC"
+			label="COM_ZEKRSHOMAR_FIELD_BG_COLOR_LABEL" />
+		<field
+			name="font_color"
+			type="color"
+			description="COM_ZEKRSHOMAR_FIELD_FONT_COLOR_DESC"
+			label="COM_ZEKRSHOMAR_FIELD_FONT_COLOR_LABEL" />
+		<field
+			name="receive_code"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_ZEKRSHOMAR_FIELD_RECEIVE_CODE_LABEL"
+			description="COM_ZEKRSHOMAR_FIELD_RECEIVE_CODE_DESC">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+	</fieldset>
+	<fieldset
+		name="receive_code_form"
+		label="COM_ZEKRSHOMAR_FIELD_CONFIG_RECEIVE_CODE_FORM"
+		description="COM_ZEKRSHOMAR_FIELD_CONFIG_RECEIVE_CODE_FORM_DESC">
+		<field name="show_receive_code"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_ZEKRSHOMAR_FIELD_RECEIVE_CODE_LABEL"
+			description="COM_ZEKRSHOMAR_FIELD_RECEIVE_CODE_DESC_FORM">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+	</fieldset>
+	<fieldset
+		name="permissions"
+		description="JCONFIG_PERMISSIONS_DESC"
+		label="JCONFIG_PERMISSIONS_LABEL">
+		<field
+			name="rules"
+			type="rules"
+			component="com_zekrshomar"
+			filter="rules"
+			validate="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			section="component" />
+	</fieldset>
+</config>
