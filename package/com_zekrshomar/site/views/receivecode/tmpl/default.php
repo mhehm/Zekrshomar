@@ -78,7 +78,7 @@ $document->addScriptDeclaration($script);
 		<input type="hidden" name="option" value="com_zekrshomar" />
 		<input type="hidden" name="view" value="zekr" />
 		<input type="hidden" name="tmpl" value="component" />
-		<input type="hidden" name="lang" value="fa" />
+		<input type="hidden" name="lang" value="<?php echo $this->document->language; ?>" />
 		<input type="hidden" name="user_id" value="<?php echo JFactory::getUser()->id; ?>" />
 	</form>
 	<!-- Preview Modal -->

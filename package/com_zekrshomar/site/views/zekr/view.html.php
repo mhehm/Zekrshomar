@@ -83,32 +83,6 @@ class ZekrshomarViewZekr extends JViewLegacy
 
 		$id = (int) @$menu->query['id'];
 
-		// if the menu item does not concern this contact
-		if ($menu && ($menu->query['option'] != 'com_zekrshomar' || $menu->query['view'] != 'zekr' || $id != $this->item->id))
-		{
-			// If this is not a single contact menu item, set the page title to the contact title
-			if ($this->item->name)
-			{
-				$title = $this->item->name;
-			}
-
-			$path     = array(array('title' => $this->zekr->name, 'link' => ''));
-			$category = JCategories::getInstance('Zekrshomar')->get($this->zekr->catid);
-
-			while ($category && ($menu->query['option'] != 'com_zekrshomar' || $menu->query['view'] == 'zekr' || $id != $category->id) && $category->id > 1)
-			{
-				$path[] = array('title' => $category->title, 'link' => ZekrshomarHelperRoute::getCategoryRoute($this->zekr->catid));
-				$category = $category->getParent();
-			}
-
-			$path = array_reverse($path);
-
-			foreach ($path as $item)
-			{
-				$pathway->addItem($item['title'], $item['link']);
-			}
-		}
-
 		if (empty($title))
 		{
 			$title = $app->getCfg('sitename');
