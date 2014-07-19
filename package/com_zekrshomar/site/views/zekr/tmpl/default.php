@@ -119,7 +119,7 @@ $options_values = explode('-', $this->params->get('options_values', '5-10-15-20-
 	<br />
 	<div class="custom_number text-center">
 		<div class="input-append">
-			<input class="text-center input-mini" id="custom_number" type="number" placeholder="<?php echo JText::_('COM_ZEKRSHOMAR_NUMBER'); ?>" />
+			<input class="text-center input-mini" id="custom_number" type="text" placeholder="<?php echo JText::_('COM_ZEKRSHOMAR_NUMBER'); ?>" />
 			<button type="button" class="btn" onclick="ajaxZekr(jQuery('#custom_number').val());"><?php echo JText::_('COM_ZEKRSHOMAR_SEND'); ?></button>
 		</div>
 	</div>

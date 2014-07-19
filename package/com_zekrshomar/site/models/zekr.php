@@ -59,6 +59,8 @@ class ZekrshomarModelZekr extends JModelForm
 		$this->setState('zekr.id', $pk);
 		$this->setState('zekr.user_id', $user_id);
 
+		$params->set('user_id' , $user_id);
+
 		$this->setState('params', $params);
 	}
 
@@ -116,21 +118,19 @@ class ZekrshomarModelZekr extends JModelForm
 				$query = $db->getQuery(true);
 
 				$user    = JFactory::getUser();
-				$user_id = $user->id ? $user->id : (int) $this->getState('zekr.user_id');
-
-				$userQuery = $user_id ? ' AND u.user_id = ' . (int) $user_id : '';
+				$user_id = $this->getState('zekr.user_id') ? $this->getState('zekr.user_id') : $user->id;
 
 				$query
-					->select('z.*, SUM(s.number) AS sumnumber')
+					->select('z.id, z.title, z.mention, z.image, SUM(s.number) AS sumnumber')
 					->from('#__zekrshomar_zekrs AS z')
 					->join('LEFT', '#__zekrshomar_stats s ON (z.id = s.zekr_id)')
-					->where('z.state = 1 AND z.id = ' . (int) $pk . $userQuery);
+					->where('z.state = 1 AND z.id = ' . (int) $pk );
 
 				if($user_id)
 				{
 					$query
 						->select('u.number AS usernumber')
-						->join('LEFT', '#__zekrshomar_stats u ON (z.id = u.zekr_id)');
+						->join('LEFT', '#__zekrshomar_stats u ON (z.id = u.zekr_id AND u.user_id = ' . (int) $user_id . ')');
 				}
 
 				$db->setQuery($query);

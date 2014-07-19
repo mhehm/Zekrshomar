@@ -15,7 +15,7 @@ defined('JPATH_BASE') or die;
  * @package     Joomla.Administrator
  * @subpackage  com_zekrshomar
  */
-class JFormFieldOrdering extends JFormField
+class JFormFieldOrdering2 extends JFormField
 {
 	/**
 	 * The form field type.
@@ -23,7 +23,7 @@ class JFormFieldOrdering extends JFormField
 	 * @var		string
 	 * @since   1.6
 	 */
-	protected $type = 'Ordering';
+	protected $type = 'Ordering2';
 
 	/**
 	 * Method to get the field input markup.

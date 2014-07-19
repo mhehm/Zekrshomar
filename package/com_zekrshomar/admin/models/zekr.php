@@ -14,9 +14,18 @@ defined('_JEXEC') or die;
  *
  * @package     Joomla.Administrator
  * @subpackage  com_zekrshomar
+ * @since       1.5
  */
 class ZekrshomarModelZekr extends JModelAdmin
 {
+	/**
+	 * The type alias for this content type.
+	 *
+	 * @var      string
+	 * @since    3.2
+	 */
+	public $typeAlias = 'com_zekrshomar.zekr';
+
 	/**
 	 * @var		string	The prefix to use with controller messages.
 	 * @since   1.6
@@ -182,7 +191,11 @@ class ZekrshomarModelZekr extends JModelAdmin
 			if (empty($table->ordering))
 			{
 				$db = JFactory::getDbo();
-				$db->setQuery('SELECT MAX(ordering) FROM #__zekrshomar_zekrs');
+				$query = $db->getQuery(true)
+					->select('MAX(ordering)')
+					->from($db->quoteName('#__zekrshomar_zekrs'));
+
+				$db->setQuery($query);
 				$max = $db->loadResult();
 
 				$table->ordering = $max + 1;
@@ -201,6 +214,7 @@ class ZekrshomarModelZekr extends JModelAdmin
 	{
 		$condition = array();
 		$condition[] = 'catid = '.(int) $table->catid;
+
 		return $condition;
 	}
 

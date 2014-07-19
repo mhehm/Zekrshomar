@@ -54,7 +54,7 @@
 		</field>
 		<field
 			name="ordering"
-			type="Ordering"
+			type="ordering2"
 			label="JFIELD_ORDERING_LABEL"
 			description="JFIELD_ORDERING_DESC" />
 		<field
